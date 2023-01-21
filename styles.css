@@ -537,9 +537,13 @@ header {
 .social-media-text {
     margin-bottom: 16px;
 }
+
+.subscribe {
+    margin-left: auto;
+}
+
 .subscribe > .social-media-text {
     margin-bottom: 16px;
-    margin-left: 80px;
 }
 
 
@@ -572,9 +576,7 @@ header {
 
 .subscribe-form {
     display: flex;
-    justify-content: space-between;
     gap: 24px;
-    margin-left: 80px;
 }
 
 .subscribe-input {
@@ -606,10 +608,13 @@ header {
 }
 
 .subscribe-button{
-    position: relative;
     width: 165px;
     height: 40px;
     padding: 8px 24px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
     border: 0;
     outline: none;
     border-radius: 4px;
@@ -633,7 +638,6 @@ header {
 }
 
 .subscribe-icon {
-    position: absolute;
     margin-left: 16px;
 
 
@@ -787,10 +791,9 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
-    padding: 24px;
+    padding: 72px 24px 24px;
     
     width: 408px;
-    min-height: 576px;
     background-color: var(--modal-back);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -799,19 +802,17 @@ header {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form {
-    display: flex;
-    flex-direction: column;
+
+.modal-field {
+    margin-bottom: 8px;
 }
 
 .modal-title {
-    margin-top: 24px;
     margin-bottom: 16px;
 
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    text-align: center;
     letter-spacing: 0.02em;
     text-align: center;
     color: var(--second-header-color);
@@ -827,6 +828,7 @@ header {
     border-radius: 4px;
     background-color: transparent;
     color: #000000; 
+    outline: none;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -854,13 +856,16 @@ header {
     line-height: 1.33;
     letter-spacing: 0.04em;
     color: rgba(117, 117, 117, 0.5);
+    outline: none;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-button{
     display: block;
-    margin-left: auto;
+    position: absolute;
+    top: 24px;
+    right: 24px;
     width: 24px;
     height: 24px;
 
@@ -891,10 +896,11 @@ header {
 
 .modal-submit-button {
     padding: 16px 32px;
-    margin-top: 24px;
     align-self: center;
     width: 169px;
     height: 56px;
+    display: block;
+    margin: 24px auto 0;
     
     border: 0;
     outline: none;
@@ -944,6 +950,7 @@ header {
     justify-content: center;
     align-items:center;
     fill: transparent;
+    cursor: pointer;
 
     border: 1.25px solid #2E2F42;
     border-radius: 2px;
