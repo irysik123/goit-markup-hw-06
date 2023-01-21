@@ -256,7 +256,7 @@ header {
 }
 
 .hero-button:hover,
-:focus{
+.hero-button::focus{
     background-color: var(--button-dark-color);
     color: var(--white-color);
 }
@@ -484,7 +484,6 @@ header {
 
 .footer {
     display: flex;
-    gap: 120px;
 
     padding-top: 100px;
     padding-bottom: 100px;
@@ -521,7 +520,6 @@ header {
 
 .footer >.container{
     display: flex;
-    gap: 120px;
 
     font-weight: 500;
     font-size: 16px;
@@ -532,9 +530,18 @@ header {
     color: var(--white-color);
 }
 
+.social-media {
+    margin-left: 120px;
+}
+
 .social-media-text {
     margin-bottom: 16px;
 }
+.subscribe > .social-media-text {
+    margin-bottom: 16px;
+    margin-left: 80px;
+}
+
 
 .social-media-list {
     display: flex;
@@ -567,6 +574,7 @@ header {
     display: flex;
     justify-content: space-between;
     gap: 24px;
+    margin-left: 80px;
 }
 
 .subscribe-input {
@@ -590,10 +598,11 @@ header {
 }
 
 .subscribe-input:focus,
-:hover {
-    border: var(--button-text-color);
+.subscribe-input:hover {
     outline: none;
     color: var(--white-color);
+    background-color: transparent;
+    border: 1px solid #4D5AE5;  
 }
 
 .subscribe-button{
@@ -618,7 +627,7 @@ header {
 }
 
 .subscribe-button:hover,
-:focus{
+.subscribe-button:focus{
     background-color: var(--button-dark-color);
     color: var(--white-color);
 }
@@ -752,7 +761,7 @@ header {
 }
 
 .filter-button:hover,
-:focus {
+.filter-button:focus {
     color: var(--white-color);
     background-color: var(--button-text-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -865,7 +874,7 @@ header {
 }
 
 .modal-close-button:hover,
-:focus{
+.modal-close-button:focus{
     background-color: var(--button-dark-color);
     fill: var(--white-color);
 }
@@ -961,7 +970,10 @@ header {
     color: var(--button-text-color);
 }
 
-.modal-input:focus, .modal-comment {
+.modal-input:focus,
+ .modal-comment:focus,
+ .modal-input:hover,
+ .modal-comment:hover {
    background-color: transparent;
    border: 1px solid #4D5AE5;
 }
